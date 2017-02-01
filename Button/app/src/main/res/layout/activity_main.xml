@@ -10,19 +10,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.tando.button.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-
     <Button
         android:text="Click Me"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="135dp"
         android:id="@+id/button"
         android:onClick="buttonFunc"
-        android:textColor="?android:attr/colorEdgeEffect" />
+        android:textColor="?android:attr/colorEdgeEffect"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Hello, What's your name?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView"
+        android:textSize="25sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:id="@+id/textField"
+        android:hint="Enter your name" />
+
 </RelativeLayout>
