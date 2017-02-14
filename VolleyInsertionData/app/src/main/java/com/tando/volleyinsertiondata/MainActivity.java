@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
     Button button;
 
-    EditText Name, Email;
+    EditText FirstName, LastName, Comment;
 
-    String server_url = "https://feedback-server-tand089.c9users.io/update_info.php";
+    String server_url = "https://feedback-server-tand089.c9users.io/addData.php";
 
     AlertDialog.Builder builder;
 
@@ -33,18 +33,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = (Button) findViewById(R.id.bn);
-        Name   = (EditText) findViewById(R.id.name);
-        Email  = (EditText) findViewById(R.id.email);
-        builder = new AlertDialog.Builder(MainActivity.this);
+        FirstName  = (EditText) findViewById(R.id.FirstName);
+        LastName   = (EditText) findViewById(R.id.LastName);
+        Comment    = (EditText) findViewById(R.id.Comment);
+        builder    = new AlertDialog.Builder(MainActivity.this);
         //set onclick function for button bn
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                final String name, email;
+                final String firstName,lastName,comment;
 
-                    name = Name.getText().toString();
-                    email = Email.getText().toString();
+                firstName = FirstName.getText().toString();
+                lastName = LastName.getText().toString();
+                comment = Comment.getText().toString();
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, server_url,
                         new Response.Listener<String>() {
                             @Override
@@ -54,8 +56,9 @@ public class MainActivity extends AppCompatActivity {
                                     builder.setPositiveButton("OK",new DialogInterface.OnClickListener(){
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
-                                            Name.setText("");
-                                            Email.setText("");
+                                            FirstName.setText("");
+                                            LastName.setText("");
+                                            Comment.setText("");
                                         }
                                     });
                                 AlertDialog alertDialog = builder.create();
@@ -72,9 +75,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String, String> params = new HashMap<String, String>();
-                        params.put("name", name);
-                        params.put("email", email);
-
+                        params.put("FIRSTNAME", firstName);
+                        params.put("LASTNAME", lastName);
+                        params.put("SUBJECT", comment);
                         return params;
                     }
                 };
