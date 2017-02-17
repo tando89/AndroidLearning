@@ -1,6 +1,7 @@
 package com.tando.mba01;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,4 +22,8 @@ public class MainActivity extends AppCompatActivity {
     public void contactUs (View viewContactUs) {
         startActivity(new Intent(this, ContactUs.class));
     }
+    public void faceBookFunc (View viewFb) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/cbpamba")));
+    }
+
 }
