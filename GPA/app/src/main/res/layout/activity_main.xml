@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tan.gpa.MainActivity"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/csusb_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="Enter the units for each courses:"
+        android:layout_marginBottom="5dp"/>
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/units"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_column="0"
+            android:layout_row="0" />
+
+        <Button
+            android:id="@+id/unitsAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginLeft="50dp"
+            android:layout_row="0"
+            android:text="INSERT" />
+    </GridLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:paddingTop="5dp"
+        android:text="Enter the grade points for each course:" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:paddingTop="5dp"
+        android:text="Grade points:
+A: 4.00, A-: 3.70
+B+: 3.33, B: 3.00, B-: 2.70
+C+: 2.30, C: 2.00, C-: 1.70
+D+: 1.30, D: 1.00, D-: 0.70, F: 0.00 " />
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/gradePoints"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_column="0"
+            android:layout_row="0" />
+
+        <Button
+            android:id="@+id/gpaAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginLeft="50dp"
+            android:layout_row="0"
+            android:text="INSERT" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/calcGPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="Calculate Your GPA" />
+
+    <TextView
+        android:id="@+id/textUnitSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total units:"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/textGPASum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total grade points:"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your GPA:"
+        android:textColor="#000" />
+</LinearLayout>
