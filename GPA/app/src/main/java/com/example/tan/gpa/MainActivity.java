@@ -1,8 +1,12 @@
 package com.example.tan.gpa;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -11,88 +15,106 @@ import android.widget.Toast;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-import static android.R.attr.button;
+
 
 public class MainActivity extends AppCompatActivity {
-    public static ArrayList<String> units = new ArrayList<String>();
-    public static ArrayList<String> grades = new ArrayList<String>();
-    double totalUnits, totalGrades, result;
+    //create an array to store the unit values, format in double
+    public static ArrayList<Double> units = new ArrayList<Double>();
+    //Create an array to store the grade points values
+    public static ArrayList<Double> gradePoints = new ArrayList<Double>();
+    //declare GPA as totalGPA, sum of units array as totalUnits, total grade points array as sum
+    //gradepoints is the value of each unit value * each grade points value
+    //num1 is unit value, num 2 is grade point value
+    double totalGPA, totalUnits, sum, gradepoints, num1, num2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //ID of EditText of units data is units
-        final EditText unitsAdd = (EditText) findViewById(R.id.units);
-        //ID of add units Button is unitsAdd
-        Button buttonUnitAdd = (Button) findViewById(R.id.unitsAdd);
-        //ID of EditText of grade points data is gradePoints
-        final EditText gradesAdd = (EditText) findViewById(R.id.gradePoints);
-        //ID of add gpa Button is gpaAdd
-        Button buttonGPAAdd = (Button) findViewById(R.id.gpaAdd);
-        //ID of calc gpa Button is calcGPA
-        Button gpaCalc = (Button) findViewById(R.id.calcGPA);
-        //ID of total units is textUnitSum
-        final TextView sumUnits = (TextView) findViewById(R.id.textUnitSum);
-        //ID of total grades is textGPASum
-        final TextView sumGPA = (TextView) findViewById(R.id.textGPASum);
-        //ID of your gpa is result
-        final TextView resGPA = (TextView) findViewById(R.id.result);
+        //call out all the input and output by their IDs
+        final EditText unitAdd = (EditText) findViewById(R.id.unitAdd);
+        final EditText gradeAdd = (EditText) findViewById(R.id.gradeAdd);
+        Button buttonCalc = (Button)findViewById(R.id.buttonCalc);
+        final TextView result = (TextView) findViewById(R.id.result);
+        final TextView resultTotalUnits = (TextView) findViewById(R.id.resultTotalUnits);
+        final TextView resultGPA = (TextView) findViewById(R.id.gpa);
+        Button buttonGPA = (Button) findViewById(R.id.calcGPA);
 
-
-        //sumUnits.setText("Total Units :"+ totalGrades);
-
-        //insert units function, store units data into an array
-        buttonUnitAdd.setOnClickListener(new View.OnClickListener() {
+        //Insert values button
+        buttonCalc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String unitsCatch = unitsAdd.getText().toString().trim();
-                if(unitsCatch.length() != 0){
-                    units.add(unitsCatch);
-                    Toast.makeText(MainActivity.this, "You have inserted: " + unitsCatch.toString() + " units", Toast.LENGTH_SHORT).show();
-                    //to continue inserting into TextEdit
-                    unitsAdd.setText("");
+                //retrieve data when user type in TextEdit (units and grade points)
+                num1 = Double.parseDouble(unitAdd.getText().toString());
+                num2 = Double.parseDouble(gradeAdd.getText().toString());
+                //function for grade points =  unit * grade point
+                gradepoints = num1 * num2;
+                //add grade points values into an array
+                if (gradepoints != 0) {
+                    gradePoints.add(gradepoints);
                 }
+                //add unit values into an array
+                if (num1 != 0) {
+                    units.add(num1);
+                }
+                //hide the keyboard after clicking the button
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(gradeAdd.getWindowToken(), 0);
+                //Display multiple strings at once Toast
+                Toast.makeText(getApplicationContext(),
+                        "You have inserted: " + num1 + " units and " + num2 + " Grade Points",
+                        Toast.LENGTH_SHORT).show();
+                //clear the TextEdit to continue adding
+                unitAdd.setText("");
+                gradeAdd.setText("");
             }
         });
-        //insert grade function, store units data into an array
-        buttonGPAAdd.setOnClickListener(new View.OnClickListener() {
+        //calculate total of units array, total of grade points array and the GPA
+        buttonGPA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String gradeCatch = gradesAdd.getText().toString().trim();
-                if(gradeCatch.length() != 0){
-                    grades.add(gradeCatch);
-                    Toast.makeText(MainActivity.this, "You have inserted: " + gradeCatch.toString() + " points", Toast.LENGTH_SHORT).show();
-                    //to continue inserting into TextEdit
-                    gradesAdd.setText("");
-                }
-            }
-        });
-
-        //GPA calculation function
-        gpaCalc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DecimalFormat format = new DecimalFormat("#.##");
-                //Total units
+                //format the values
+                DecimalFormat format = new DecimalFormat("#.#");
                 for(int i=0;i<units.size();i++){
-                    //parse Double values to an array to get the sum function
-                    totalUnits =  Double.parseDouble(units.get(i)) + totalUnits;
+                    //sum of the array called units
+                    totalUnits =  (units.get(i)) + totalUnits;
                 }
-                sumUnits.setText("Total Units :"+ totalUnits);
-                //Total grade points
-                for(int i=0;i<grades.size();i++){
-                    //parse Double values to an array to get the sum function
-                    totalGrades =  Double.parseDouble(grades.get(i)) + totalGrades;
+
+                for(int i=0;i<gradePoints.size();i++){
+                    //sum of the array called gradePoints
+                    sum =  (gradePoints.get(i)) + sum;
                 }
-                sumGPA.setText("Total grade points :"+ totalGrades);
-                result = totalGrades / totalUnits;
-                resGPA.setText("Your GPA is :"+ format.format(result));
-                result = 0;
+                //GPA function = total grade points / total units
+                totalGPA = sum / totalUnits;
+
+                //Display the results in the TextView sections
+                resultTotalUnits.setText("Total units :"+Double.toString(totalUnits));
+                result.setText("Total grade points :"+format.format(sum));
+                resultGPA.setText("GPA: "+format.format(totalGPA));
+                //Clear the arrays
+                totalGPA = 0;
                 totalUnits = 0;
-                totalGrades = 0;
+                sum = 0;
+                gradePoints.clear();
                 units.clear();
-                grades.clear();
             }
         });
+
+
+    }
+    //link to Facebook page
+    public void fbFunc (View viewFb) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/cbpamba")));
+    }
+    //link to Instagram page
+    public void igFunc (View viewIg) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/mba_csusb/")));
+    }
+    //link to Linkedin page
+    public void lnFunc (View viewLn) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/mbacsusb/")));
+    }
+    //link to Twitter page
+    public void twFunc (View viewTw) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/MBACSUSB")));
     }
 }
