@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tando.mba01">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="MBA"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Page02"
+            android:label="About Us"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MBAstaff"
+            android:label="MBA Staff"
+            android:parentActivityName=".Page02" />
+        <activity
+            android:name=".MBAmission"
+            android:label="MBA Mission"
+            android:parentActivityName=".Page02" />
+        <activity
+            android:name=".MBAlearninggoals"
+            android:label="MBA Learning Goals"
+            android:parentActivityName=".Page02" />
+        <activity
+            android:name=".Contact_Us"
+            android:label="Contact Us"
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Passport"
+            android:label="Passport"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Advising"
+            android:label="Advising"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CoordinatorInfo"
+            android:label="Coordinator Contact Info"
+            android:parentActivityName=".Advising" />
+        <activity
+            android:name=".MBAFocusAreas"
+            android:label="MBA Focus Areas"
+            android:parentActivityName=".Advising" />
+        <activity android:name=".RequestAppointment"
+            android:label="Request an Appointment"
+            android:parentActivityName=".Advising"></activity>
+    </application>
+
+</manifest>

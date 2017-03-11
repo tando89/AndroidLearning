@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">MBA01</string>
+
+    <string name="txt01">1.	<u><b>Specific Knowledge and Skills:</b></u> Each student should obtain specialized
+        knowledge and skills for the creation of value through
+        integrated operations and distribution of goods, services, and information.
+    </string>
+    <string name="txt02">2.	<u><b>Communication, Written:</b></u>Each student can effectively
+        communicate in writing.
+    </string>
+    <string name="txt03">3.	<u><b>Communication, Oral:</b></u>Each student can effectively present
+        information orally.
+    </string>
+    <string name="txt04">4.	<u><b>Ethical Reasoning:</b></u>Each student can recognize/analyze problems and choose/defend
+        resolutions for practical business situations.
+    </string>
+    <string name="txt05">5. <u><b>Information Technology: </b></u>Each student can use information technology to support the structure
+        and processes of the organization, and use information technology in decision-making.
+    </string>
+    <string name="txt06">6.	<u><b>Problem Solving:</b></u>Each student can apply knowledge in new and unfamiliar circumstances
+        and devise innovative solutions to cope with unforeseen events.
+    </string>
+    <string name="txt07">7. <u><b>Global Context:</b></u>Each student understands varied cultural perspectives and global environments
+        and can develop innovative business solutions and practices that address complexity.
+    </string>
+
+    <string name="drSealText">
+        Dr. Craig Seal\n
+        Professor\n
+        MBA Director\n
+        Room: JB 283
+    </string>
+    <string name="msD">
+        Deborah Grijalva, MPA\n
+        MBA Graduate Coordinator\n
+        Room: JB 283
+    </string>
+
+    <string name="msAdams">
+        Kasandra Adams, MBA\n
+        Administrative Support \n
+        Coordinator II\n
+        Room: JB 283
+    </string>
+
+    <string name="mrOmar">
+        Omar Palmerin\n
+        Administrative Support Assistant\n
+        Room: JB 283
+    </string>
+
+    <string name="passport1">
+        1. <b>Leadership</b>– This passport will serve as a guide to signature activities being offered by
+        the college. At the end of the academic year, MBA students who earn seven stamps on
+        activities/events that represent the MBA Program Learning Goals will be awarded with an MBA
+        Leadership Certificate.
+    </string>
+
+    <string name="passport2">
+        2. <b>Learning Goals</b>: [click here]
+    </string>
+    <string name="passport3">
+        3. <b>More than a Degree</b> – By completing your MBA Passport you will have the advantage of
+        letting future employers know that you did more during your graduate degree than attend
+        course and obtain high marks. This program will allow you to network with fellow students,
+        alumni, and faculty. This is a sure way to build your resume.
+    </string>
+    <string name="passport4">
+        <b>CBPA</b>: [Click here]
+    </string>
+    <string name="passport5">
+        <b>MBA</b>: [Click here]
+    </string>
+    <string name="focusAreas">
+        \n
+         i.	Accounting \n
+        \n
+        ii.	Business Intelligence \n
+        \n
+        iii. Cyber Security \n
+        \n
+        iv.	Entrepreneurship \n
+        \n
+        v. Finance \n
+        \n
+        vi.	Management \n
+        \n
+        vii. Marketing Management \n
+        \n
+        viii. Global Supply Chain Management \n
+        \n
+        ix.	MBA Online Professionals \n
+        \n
+    </string>
+</resources>
