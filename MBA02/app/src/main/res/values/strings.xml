@@ -92,4 +92,10 @@
         ix.	MBA Online Professionals \n
         \n
     </string>
+    <string name="GradePoints">Grade points:\n
+    A: 4.00, A-: 3.70 \n
+    B+: 3.33, B: 3.00, B-: 2.70 \n
+    C+: 2.30, C: 2.00, C-: 1.70 \n
+    D+: 1.30, D: 1.00, D-: 0.70, F: 0.00
+    </string>
 </resources>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tando.mba01.GPAcalculator"
+    android:orientation="vertical"
+    android:background="#FFF"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/csusb_logo"
+        android:onClick="backHome"/>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:paddingTop="5dp"
+        android:text="@string/GradePoints"
+        android:textSize="18dp"
+        />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Enter your units* and grade points* for each of your class:"/>
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+        <EditText
+            android:id="@+id/unitAdd"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:hint="Unit*"
+            android:background="@drawable/edittext_style03"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"/>
+        <EditText
+            android:id="@+id/gradeAdd"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:background="@drawable/edittext_style03"
+            android:hint="Grade Point*"
+            android:layout_marginBottom="5dp"/>
+        <Button
+            android:id="@+id/buttonCalc"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_column="2"
+            android:layout_marginLeft="10dp"
+            android:layout_row="0"
+            android:text="INSERT"
+            />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/calcGPA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="Calculate Your GPA" />
+
+    <TextView
+        android:id="@+id/resultTotalUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total units:"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total grade points:"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your GPA:"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/facebookicon"
+            android:paddingRight="5dp"
+            android:id="@+id/Facebook"
+            android:onClick="fbFunc"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/instagramicon"
+            android:paddingRight="5dp"
+            android:id="@+id/Instagram"
+            android:onClick="igFunc"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/linkedin"
+            android:paddingRight="5dp"
+            android:id="@+id/Linkedin"
+            android:onClick="lnFunc"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/twittericon"
+            android:paddingRight="5dp"
+            android:id="@+id/Twitter"
+            android:onClick="twFunc"/>
+    </LinearLayout>
+</LinearLayout>

@@ -54,10 +54,16 @@
             android:name=".MBAFocusAreas"
             android:label="MBA Focus Areas"
             android:parentActivityName=".Advising" />
-        <activity android:name=".RequestAppointment"
+        <activity
+            android:name=".RequestAppointment"
             android:label="Request an Appointment"
             android:parentActivityName=".Advising"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".GPAcalculator"
+            android:label="GPA Calculator"
+            android:parentActivityName=".Advising"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
     </application>
 
 </manifest>

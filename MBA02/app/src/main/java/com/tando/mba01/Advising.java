@@ -29,6 +29,10 @@ public class Advising extends AppCompatActivity {
     public void startRequestAppoint (View viewAppointment) {
         startActivity(new Intent(this, RequestAppointment.class));
     }
+    //GPA calculator
+    public void StartGPACalc (View viewGPA) {
+        startActivity(new Intent(this, GPAcalculator.class));
+    }
     //Social Media Functions
     //link to Facebook page
     public void fbFunc (View viewFb) {
