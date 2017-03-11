@@ -183,7 +183,7 @@
                             android:inputType="textPersonName"
                             android:text=""
                             android:textColorHint="#BCC0C2"
-                            android:hint="First Name"
+                            android:hint="First Name*"
                             android:ems="10"
                             android:background="@drawable/edittext_style01"
                             android:id="@+id/FirstName" />
@@ -201,7 +201,7 @@
                             android:inputType="textPersonName"
                             android:text=""
                             android:textColorHint="#BCC0C2"
-                            android:hint="Last Name"
+                            android:hint="Last Name*"
                             android:ems="10"
                             android:id="@+id/LastName"
                             android:background="@drawable/edittext_style01"/>
@@ -219,7 +219,7 @@
                             android:inputType="textPersonName"
                             android:text=""
                             android:textColorHint="#BCC0C2"
-                            android:hint="Student ID"
+                            android:hint="Student ID*"
                             android:ems="10"
                             android:background="@drawable/edittext_style01"
                             android:id="@+id/StudentID" />
@@ -237,7 +237,7 @@
                             android:inputType="textPersonName"
                             android:text=""
                             android:textColorHint="#BCC0C2"
-                            android:hint="Coyote Email"
+                            android:hint="Coyote Email*"
                             android:ems="10"
                             android:background="@drawable/edittext_style01"
                             android:id="@+id/CoyoteEmail" />
@@ -257,7 +257,7 @@
                             android:inputType="textMultiLine"
                             android:ems="10"
                             android:textColorHint="#BCC0C2"
-                            android:hint="Message..."
+                            android:hint="Message...*"
                             android:id="@+id/Messages"
                             android:background="@drawable/textedit_messages"
                             />

@@ -56,7 +56,8 @@
             android:parentActivityName=".Advising" />
         <activity android:name=".RequestAppointment"
             android:label="Request an Appointment"
-            android:parentActivityName=".Advising"></activity>
+            android:parentActivityName=".Advising"
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>
