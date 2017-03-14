@@ -98,4 +98,10 @@
     C+: 2.30, C: 2.00, C-: 1.70 \n
     D+: 1.30, D: 1.00, D-: 0.70, F: 0.00
     </string>
+    <string name="contact01">Ask Question / Make a Comment:\n
+    *= required fields</string>
+    <string name="appointment01">Fill out this form to request an appointment:\n
+        *= required fields</string>
+    <string name="advising01">Fill out this form to ask for advising:\n
+    *= required fields</string>
 </resources>

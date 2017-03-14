@@ -89,7 +89,7 @@ public class RequestAppointment extends AppCompatActivity {
         Date = (EditText) findViewById(R.id.text05);
 
         builder = new AlertDialog.Builder(RequestAppointment.this);
-        //set function for the button btn01
+        //set function for the button bn02 buttonSubmit
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,7 +145,7 @@ public class RequestAppointment extends AppCompatActivity {
                 };
                         MySingleton.getInstance(RequestAppointment.this).addTorequestqueue(stringRequest02);
             }
-        });
+        }); //end of button submit fucntion
     }
 
 }

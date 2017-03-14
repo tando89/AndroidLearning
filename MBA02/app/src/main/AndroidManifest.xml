@@ -59,11 +59,15 @@
             android:label="Request an Appointment"
             android:parentActivityName=".Advising"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".GPAcalculator"
+        <activity
+            android:name=".GPAcalculator"
             android:label="GPA Calculator"
             android:parentActivityName=".Advising"
-            android:windowSoftInputMode="stateHidden">
-        </activity>
+            android:windowSoftInputMode="stateHidden"></activity>
+        <activity android:name=".RequestAdvising"
+            android:label="Ask for Advising"
+            android:parentActivityName=".Advising"
+            android:windowSoftInputMode="stateHidden"></activity>
     </application>
 
 </manifest>

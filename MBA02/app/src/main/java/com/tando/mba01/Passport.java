@@ -25,6 +25,10 @@ public class Passport extends AppCompatActivity {
     public void CBPA (View viewFocusAreas) {
         startActivity(new Intent(this, MBAFocusAreas.class));
     }
+    //link to GPA calculator
+    public void MBA (View viewCalc) {
+        startActivity(new Intent(this, GPAcalculator.class));
+    }
     //link to Facebook page
     public void fbFunc (View viewFb) {
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/cbpamba")));

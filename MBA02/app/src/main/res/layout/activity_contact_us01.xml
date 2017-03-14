@@ -163,7 +163,7 @@
                         android:layout_marginBottom="10dp">
 
                         <TextView
-                            android:text="Ask Question / Make a Comment:"
+                            android:text="@string/contact01"
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
                             android:layout_width="wrap_content"
