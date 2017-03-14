@@ -18,7 +18,9 @@ import java.util.ArrayList;
 public class GPAcalculator extends AppCompatActivity {
     //create an array to store the unit values, format in double
     public static ArrayList<Double> units = new ArrayList<Double>();
-    //Create an array to store the grade points values
+    //create an array to store the unit values, format in double
+    public static ArrayList<Double> grades = new ArrayList<Double>();
+    //Create an array to store the total grade points = units * grade points values
     public static ArrayList<Double> gradePoints = new ArrayList<Double>();
     //declare GPA as totalGPA, sum of units array as totalUnits, total grade points array as sum
     //gradepoints is the value of each unit value * each grade points value
@@ -36,14 +38,20 @@ public class GPAcalculator extends AppCompatActivity {
         final TextView resultTotalUnits = (TextView) findViewById(R.id.resultTotalUnits);
         final TextView resultGPA = (TextView) findViewById(R.id.gpa);
         Button buttonGPA = (Button) findViewById(R.id.calcGPA);
-
+        Button buttonClear = (Button) findViewById(R.id.clear);
         //Insert values button
         buttonCalc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //retrieve data when user type in TextEdit (units and grade points)
-                num1 = Double.parseDouble(unitAdd.getText().toString());
-                num2 = Double.parseDouble(gradeAdd.getText().toString());
+                //Check to make sure users enter all the required fields
+                if (unitAdd.getText().toString().trim().length() == 0 && gradeAdd.getText().toString().trim().length() == 0) {
+                    Toast.makeText(GPAcalculator.this, "Required fields cannot be empty!", Toast.LENGTH_SHORT).show();
+                    return;
+                } else {
+                    num1 = Double.parseDouble(unitAdd.getText().toString());
+                    num2 = Double.parseDouble(gradeAdd.getText().toString());
+                }
                 //function for grade points =  unit * grade point
                 gradepoints = num1 * num2;
                 //add grade points values into an array
@@ -53,6 +61,10 @@ public class GPAcalculator extends AppCompatActivity {
                 //add unit values into an array
                 if (num1 != 0) {
                     units.add(num1);
+                }
+                //add grades into an array
+                if (num2 !=0) {
+                    grades.add(num2);
                 }
                 //hide the keyboard after clicking the button
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -94,6 +106,20 @@ public class GPAcalculator extends AppCompatActivity {
                 sum = 0;
                 gradePoints.clear();
                 units.clear();
+                grades.clear();
+            }
+        });
+        //clear the arrays if wrong inputs
+        buttonClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                resultTotalUnits.setText("");
+                result.setText("");
+                resultGPA.setText("");
+                gradePoints.clear();
+                units.clear();
+                grades.clear();
+                Toast.makeText(GPAcalculator.this, "All fields are empty! Please re-enter the data", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -11,6 +11,13 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -33,9 +40,9 @@
         android:layout_height="wrap_content"
         android:textStyle="bold"
         android:textColor="#000"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:text="Enter your units* and grade points* for each of your class:"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="7dp"
+        android:text="@string/gpaCalc"/>
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -66,7 +73,13 @@
             android:text="INSERT"
             />
     </GridLayout>
-
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="clear" />
     <Button
         android:id="@+id/calcGPA"
         android:layout_width="wrap_content"
@@ -101,43 +114,45 @@
         android:textColor="#000"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/facebookicon"
-            android:paddingRight="5dp"
-            android:id="@+id/Facebook"
-            android:onClick="fbFunc"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/facebookicon"
+                    android:paddingRight="5dp"
+                    android:id="@+id/Facebook"
+                    android:onClick="fbFunc"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/instagramicon"
-            android:paddingRight="5dp"
-            android:id="@+id/Instagram"
-            android:onClick="igFunc"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/instagramicon"
+                    android:paddingRight="5dp"
+                    android:id="@+id/Instagram"
+                    android:onClick="igFunc"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/linkedin"
-            android:paddingRight="5dp"
-            android:id="@+id/Linkedin"
-            android:onClick="lnFunc"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/linkedin"
+                    android:paddingRight="5dp"
+                    android:id="@+id/Linkedin"
+                    android:onClick="lnFunc"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/twittericon"
-            android:paddingRight="5dp"
-            android:id="@+id/Twitter"
-            android:onClick="twFunc"/>
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/twittericon"
+                    android:paddingRight="5dp"
+                    android:id="@+id/Twitter"
+                    android:onClick="twFunc"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
