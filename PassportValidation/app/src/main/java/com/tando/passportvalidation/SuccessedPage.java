@@ -1,11 +1,13 @@
 package com.tando.passportvalidation;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -28,7 +30,7 @@ public class SuccessedPage extends AppCompatActivity {
 
     //Declare variables
     Button bntfunc;
-    EditText Date, Name, StudentID;
+    EditText Date, Name, StudentID, Events;
     String server_url = "https://feedback-server-tand089.c9users.io/PassportUsersData.php";
 
     AlertDialog.Builder builder;
@@ -42,6 +44,7 @@ public class SuccessedPage extends AppCompatActivity {
         Name = (EditText) findViewById(R.id.Name);
         StudentID = (EditText) findViewById(R.id.StudentID);
         Date = (EditText) findViewById(R.id.Date);
+        Events = (EditText) findViewById(R.id.submit_Events);
 
         builder = new AlertDialog.Builder(SuccessedPage.this);
 
@@ -49,11 +52,18 @@ public class SuccessedPage extends AppCompatActivity {
         bntfunc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String date, name, studentID;
+                //Hide virtual keyboard after click the button
+                InputMethodManager inputManager = (InputMethodManager)
+                        getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                        InputMethodManager.HIDE_NOT_ALWAYS);
+                final String date, name, studentID, events;
                 //covert inputs to string
                 date = Date.getText().toString();
                 name = Name.getText().toString();
                 studentID = StudentID.getText().toString();
+                events = Events.getText().toString();
                     //request with POST method and string
                     StringRequest stringRequest = new StringRequest(Request.Method.POST, server_url,
                             new Response.Listener<String>() {
@@ -69,7 +79,7 @@ public class SuccessedPage extends AppCompatActivity {
                                             Date.setText("");
                                             Name.setText("");
                                             StudentID.setText("");
-
+                                            Events.setText("");
                                         }
                                     });
                                     AlertDialog alertDialog = builder.create();
@@ -91,6 +101,7 @@ public class SuccessedPage extends AppCompatActivity {
                             params.put("Date", date);
                             params.put("Name", name);
                             params.put("StudentID", studentID);
+                            params.put("Events", events);
 
                             return params;
                         }

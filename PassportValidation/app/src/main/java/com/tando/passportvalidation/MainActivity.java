@@ -1,11 +1,13 @@
 package com.tando.passportvalidation;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -45,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Hide virtual keyboard after click the button
+                InputMethodManager inputManager = (InputMethodManager)
+                        getSystemService(Context.INPUT_METHOD_SERVICE);
+
+                inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                        InputMethodManager.HIDE_NOT_ALWAYS);
                 //validation for username and password. Ensure corrected input
 
                 passcode = Passcode.getText().toString();
@@ -103,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                     };
 
                     MySingleton.getInstance(MainActivity.this).addTorequestqueue(stringRequest);
-                    //Code to change color of listview in here
+
                 }
 
             }
@@ -123,5 +131,8 @@ public class MainActivity extends AppCompatActivity {
         //First create AlertDialog variable then display it
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+    }
+    public void bnt_Events (View view) {
+        startActivity(new Intent(this, Check_Events.class));
     }
 }

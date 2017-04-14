@@ -4,9 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tando.passportvalidation.MainActivity"
-    android:orientation="vertical">
-
+    tools:context="com.tando.passportvalidation.Check_Events"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
     <LinearLayout
         android:layout_marginTop="100dp"
         android:paddingLeft="10dp"
@@ -18,39 +27,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Passcode: "
+            android:text="StudentID: "
             android:textSize="17dp"/>
 
         <EditText
-            android:id="@+id/login_passcode"
+            android:id="@+id/login_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:inputType="textPassword"
-            android:hint="passcode"/>
+            android:inputType="text"
+            android:hint="studentID*"/>
     </LinearLayout>
     <Button
         android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Validate"
-        android:id="@+id/button_login"/>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Events I have attended:"
-        android:layout_weight="0"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Check"
-            android:onClick="bnt_Events"/>
-    </LinearLayout>
+        android:text="Enter"
+        android:id="@+id/button_id"/>
 
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:id="@+id/listv"
+        android:layout_marginLeft="10dp"
+         />
+
+
+
+    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
