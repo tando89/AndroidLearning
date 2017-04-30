@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Units"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -20,5 +20,27 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinner">
     </android.support.v7.widget.AppCompatSpinner>
+    <Button
+        android:id="@+id/bntInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:text="INSERT"
+        />
+    <Button
+        android:id="@+id/bntCount"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:text="Count Units"
+        />
+    <TextView
+        android:id="@+id/resultTotalUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total units:"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
 
 </LinearLayout>

@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">Spinner</string>
-    <string-array name="sport_name">
-        <item>Football</item>
-        <item>Boxing</item>
-        <item>Soccer</item>
-        <item>Bodybuilding</item>
-        <item>Basketball</item>
+    <string-array name="units">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
     </string-array>
 </resources>
