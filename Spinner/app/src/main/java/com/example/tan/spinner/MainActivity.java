@@ -90,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "Error!!!", Toast.LENGTH_LONG).show();
                 }
+                spinner.setSelection(0);
+                spinner2.setSelection(0);
             }
         });
         //Total units function
@@ -110,9 +112,9 @@ public class MainActivity extends AppCompatActivity {
                //GPA
                totalGPA = sum / totalUnits;
                //Display the results in the TextView sections
-               resultTotalUnits.setText("Total units :"+Double.toString(totalUnits));
+               resultTotalUnits.setText("Total units: "+Double.toString(totalUnits));
                //Display total gradepoints
-               result.setText("Total grade points :"+format.format(sum));
+               result.setText("Total grade points: "+format.format(sum));
                //Display GPA
                resultGPA.setText("GPA: "+format.format(totalGPA));
                //Clear the array after button clicked
@@ -130,8 +132,6 @@ public class MainActivity extends AppCompatActivity {
         bntClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                spinner.setSelection(0);
-                spinner2.setSelection(0);
                 resultTotalUnits.setText("null");
                 result.setText("null");
                 resultGPA.setText("null");
