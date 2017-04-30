@@ -7,4 +7,19 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+
+    <string-array name="grade_points">
+        <item>0.00</item>
+        <item>4.00</item>
+        <item>3.70</item>
+        <item>3.33</item>
+        <item>3.00</item>
+        <item>2.70</item>
+        <item>2.30</item>
+        <item>2.00</item>
+        <item>1.70</item>
+        <item>1.30</item>
+        <item>1.00</item>
+        <item>0.70</item>
+    </string-array>
 </resources>

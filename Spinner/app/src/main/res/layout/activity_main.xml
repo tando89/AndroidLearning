@@ -6,33 +6,70 @@
     android:layout_height="match_parent"
     tools:context="com.example.tan.spinner.MainActivity"
     android:orientation="vertical">
-
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="30dp">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Units"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Units*"
+        android:layout_column="0"
+        android:layout_row="0"
+       />
     <android.support.v7.widget.AppCompatSpinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner">
+        android:id="@+id/spinner"
+        android:layout_column="1"
+        android:layout_row="0">
     </android.support.v7.widget.AppCompatSpinner>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grade Points*:"
+            android:layout_column="2"
+            android:layout_row="0"
+            />
+        <android.support.v7.widget.AppCompatSpinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner2"
+            android:layout_column="3"
+            android:layout_row="0">
+        </android.support.v7.widget.AppCompatSpinner>
+    </GridLayout>
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center">
     <Button
         android:id="@+id/bntInsert"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_gravity="center"
+        android:layout_height="45dp"
         android:text="INSERT"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_marginRight="15dp"
         />
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="clear"
+        android:layout_row="0"
+        android:layout_column="1"/>
+    </GridLayout>
     <Button
         android:id="@+id/bntCount"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Count Units"
+        android:text="Calcualte Your GPA"
         />
     <TextView
         android:id="@+id/resultTotalUnits"
@@ -42,5 +79,21 @@
         android:textColor="#000"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"/>
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total grade points:"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:id="@+id/gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your GPA:"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"/>
 
 </LinearLayout>
