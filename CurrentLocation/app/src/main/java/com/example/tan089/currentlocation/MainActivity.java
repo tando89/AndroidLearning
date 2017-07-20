@@ -10,16 +10,15 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -135,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
 
                         updatedLocationInfo(location);
             }
-//
+//a comment
             @Override
             public void onStatusChanged(String provider, int status, Bundle extras) {
 
@@ -175,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-   /*
+    // using onClick
    public void bntTap (View bnt) {
         Message = (EditText) findViewById(R.id.message);
         //Hide virtual keyboard after click the button
@@ -225,6 +224,7 @@ public class MainActivity extends AppCompatActivity {
                     Map<String, String> params = new HashMap<String, String>();
                     //send data to mySQL server
                     //the keys must be same as field names in mySQL server
+                    // get the list of the address
                     params.put("LOCATION", address);
                     params.put("MESSAGES", message);
                     return params;
@@ -233,5 +233,5 @@ public class MainActivity extends AppCompatActivity {
             MySingleton.getInstance(MainActivity.this).addTorequestqueue(stringRequest);
             //Log.i("Address", address.toString());
         }
-    } */
+    }
 }
