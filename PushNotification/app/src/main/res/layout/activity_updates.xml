@@ -4,8 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.tan089.pushnotification.MainActivity"
+    tools:context="com.example.tan089.pushnotification.Updates"
     android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Live Updates"
+        android:textColor="#000"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_gravity="center"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,14 +23,6 @@
         android:text="Body"
         android:textSize="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get Updates"
-        android:layout_gravity="center"
-        android:id="@+id/bnt01"/>
+        android:layout_marginTop="20dp"/>
 
 </LinearLayout>
