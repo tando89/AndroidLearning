@@ -7,19 +7,12 @@
     tools:context="com.example.tan089.emailtest.MainActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:text="Recipient Email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editTextEmail" />
+
     <TextView
         android:text="Subject"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
