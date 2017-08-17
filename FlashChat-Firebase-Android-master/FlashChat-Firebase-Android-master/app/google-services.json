@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "676479563032",
+    "firebase_url": "https://realtimechat-ab826.firebaseio.com",
+    "project_id": "realtimechat-ab826",
+    "storage_bucket": "realtimechat-ab826.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676479563032:android:a356bf020f8b0d1f",
+        "android_client_info": {
+          "package_name": "com.tando.flashchatnewfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676479563032-os4129ve78k1h7ldjk306c8eo4c68a69.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlGx2JqORD4ug2eBfj9iDBQvo0fD1lRms"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
