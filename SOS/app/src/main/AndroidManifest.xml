@@ -35,14 +35,19 @@
         </service>
 
         <activity
-            android:name=".GetUpdates"
-            android:label="Updates"
+            android:name=".GetLiveMessage"
+            android:label="Live Messenger"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".ReportPage"
+        <activity
+            android:name=".ReportPage"
             android:label="Report Emergency"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".confirmEmergencyPage"
-            android:label="SOS"></activity>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".confirmEmergencyPage"
+            android:label="SOS" />
+        <activity android:name=".RegisterActivity"
+            android:label="SOS Register"
+            android:parentActivityName=".GetLiveMessage"></activity>
     </application>
 
 </manifest>

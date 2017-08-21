@@ -8,29 +8,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import static com.example.tan089.sos.R.layout.fragment_home;
 
@@ -40,7 +23,7 @@ import static com.example.tan089.sos.R.layout.fragment_home;
 
 public class home extends Fragment {
 
-    Button getUpdates;
+    Button getMessage;
     TextView Message;
     ImageButton alarmButton;
 
@@ -64,11 +47,11 @@ public class home extends Fragment {
                     Message.setText("Message from server:" + " " + getActivity().getIntent().getExtras().getString(key));
             }
         }
-        getUpdates = (Button) viewHome.findViewById(R.id.getUpdates);
-        getUpdates.setOnClickListener(new View.OnClickListener() {
+        getMessage = (Button) viewHome.findViewById(R.id.getMessage);
+        getMessage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), GetUpdates.class);
+                Intent intent = new Intent(getActivity(), GetLiveMessage.class);
                 startActivity(intent);
             }
         });
