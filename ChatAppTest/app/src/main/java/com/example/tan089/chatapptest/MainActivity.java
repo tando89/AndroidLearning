@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         ) {
             @Override
             protected void populateView(View v, Message model, int position) {
+                //need to seperated the row
                 TextView msg=(TextView)v.findViewById(R.id.textView1);
                 msg.setText(model.getUser_name()+" : "+model.getMessage());
             }

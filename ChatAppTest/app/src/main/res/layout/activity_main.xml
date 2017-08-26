@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,35 +9,45 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     tools:context="com.example.tan089.chatapptest.MainActivity"
-    android:orientation="vertical">
+    >
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:id="@+id/listview"
-        android:layout_weight="0.9">
+        android:transcriptMode="alwaysScroll"
+        android:layout_alignParentTop="true"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_above="@+id/listFooter">
     </ListView>
 
     <LinearLayout
+        android:id="@+id/listFooter"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_weight="0.1"
-        android:layout_height="0dp"
-        >
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom">
         <EditText
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/edittext"
-            android:layout_weight="0.8"
-            android:hint="Enter your message"/>
+            android:layout_weight="1"
+            android:hint="Enter your message"
+            android:textColor="#000"
+            android:imeActionLabel="Send"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:maxLines="1"
+            android:gravity="left"/>
         <Button
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Send"
             android:onClick="send"
-            android:layout_weight="0.2"
             />
     </LinearLayout>
 
 
 
-    </LinearLayout>
+    </RelativeLayout>
