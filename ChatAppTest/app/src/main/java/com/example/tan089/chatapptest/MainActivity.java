@@ -1,5 +1,6 @@
 package com.example.tan089.chatapptest;
 
+import android.content.Intent;
 import android.os.*;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
         if(item.getItemId()==R.id.logout)
         {
             mAuth.signOut();//when the user clicks signout option this will executes
+            startActivity(new Intent(MainActivity.this,FirstActivity.class));
             finish();
         }
         return super.onOptionsItemSelected(item);
