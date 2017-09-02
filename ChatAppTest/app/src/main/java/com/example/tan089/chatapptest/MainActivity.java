@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.*;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -58,7 +59,12 @@ public class MainActivity extends AppCompatActivity {
             protected void populateView(View v, Message model, int position) {
                 //need to seperated the row
                 TextView msg=(TextView)v.findViewById(R.id.textView1);
-                msg.setText(model.getUser_name()+" : "+model.getMessage());
+                TextView msg2 = (TextView)v.findViewById(R.id.textView2);
+                TextView time = (TextView)v.findViewById(R.id.textView3);
+                //msg.setText(model.getUser_name()+" : "+model.getMessage());
+                time.setText(DateFormat.format("dd-MM-yyyy (HH:mm:ss)", model.getMessageTime()));
+                msg.setText(model.getUser_name());
+                msg2.setText(model.getMessage());
             }
         };
         listView.setAdapter(adapter);

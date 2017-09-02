@@ -81,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
     private void attemptLogin() {
         String userEmail = email.getText().toString();
         String userPassword = password.getText().toString();
+        //stop the task if the fields are left blank
         if (userEmail.equals("") || userPassword.equals("")) return;
         loginDialog =new ProgressDialog(this);
         loginDialog.setMessage("Login in progress...");
