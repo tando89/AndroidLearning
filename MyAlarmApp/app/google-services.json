@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "376255148588",
+    "firebase_url": "https://myalarmapp-2360e.firebaseio.com",
+    "project_id": "myalarmapp-2360e",
+    "storage_bucket": "myalarmapp-2360e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376255148588:android:e33f65cf425aca80",
+        "android_client_info": {
+          "package_name": "com.example.tan089.myalarmapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376255148588-rbph1on8bog69um269g4gsucvkklksl1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tan089.myalarmapp",
+            "certificate_hash": "1df1de5f4883d935d94796bcc2131ce302304b00"
+          }
+        },
+        {
+          "client_id": "376255148588-npn4tm3c89f52l1r2lnamgbmus08ug0b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjxxQUqjLXl2NvM2cHF2Z-CVc0PUW9sTs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376255148588-npn4tm3c89f52l1r2lnamgbmus08ug0b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
