@@ -1,12 +1,10 @@
 package com.example.tan089.chatapptest;
 
 import android.app.ProgressDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -25,7 +23,7 @@ import java.util.Map;
 
 public class SendPushNotification extends AppCompatActivity {
     private Button buttonSendPush;
-    private EditText editTextTitle, editTextMessage, editTextImage;
+    //private EditText editTextTitle, editTextMessage, editTextImage;
     private List<String> devices;
     private ProgressDialog progressDialog;
 
@@ -35,9 +33,9 @@ public class SendPushNotification extends AppCompatActivity {
         setContentView(R.layout.activity_send_push_notification);
         buttonSendPush = (Button) findViewById(R.id.buttonSendPush);
 
-        editTextTitle = (EditText) findViewById(R.id.editTextTitle);
-        editTextMessage = (EditText) findViewById(R.id.editTextMessage);
-        editTextImage = (EditText) findViewById(R.id.editTextImageUrl);
+        //editTextTitle = (EditText) findViewById(R.id.editTextTitle);
+        //editTextMessage = (EditText) findViewById(R.id.editTextMessage);
+        //editTextImage = (EditText) findViewById(R.id.editTextImageUrl);
         devices = new ArrayList<>();
 
         //radioGroup.setOnCheckedChangeListener(this);
@@ -97,9 +95,11 @@ public class SendPushNotification extends AppCompatActivity {
     }
 
     private void sendMultiplePush() {
-        final String title = editTextTitle.getText().toString();
-        final String message = editTextMessage.getText().toString();
-        final String image = editTextImage.getText().toString();
+        //final String title = editTextTitle.getText().toString();
+        final String title = "SOS";
+        //final String message = editTextMessage.getText().toString();
+        final String message = "Good morning, this is a test from Tan";
+        //final String image = editTextImage.getText().toString();
 
         progressDialog.setMessage("Sending Push");
         progressDialog.show();
@@ -125,8 +125,8 @@ public class SendPushNotification extends AppCompatActivity {
                 params.put("title", title);
                 params.put("message", message);
 
-                if (!TextUtils.isEmpty(image))
-                    params.put("image", image);
+               /* if (!TextUtils.isEmpty(image))
+                    params.put("image", image);*/
                 return params;
             }
         };
